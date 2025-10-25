@@ -30,15 +30,21 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="/images/pnglogo_garasicerdas.png" alt="Logo Garasi Cerdas">
+                <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761406530/Garasi_Cerdas_Logo_ahd7i9.png" alt="Logo Garasi Cerdas">
             </div>
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#berKamu" class="nav-link">Beranda</a></li>
                 <li><a href="#tentang-kami" class="nav-link">Tentang Kami</a></li>
                 <li><a href="#program" class="nav-link">Program</a></li>
-                <li><a href="#webinar" class="nav-link">Webinar</a></li>
-                <li><a href="#try-out" class="nav-link">Try Out</a></li>
+                <li class="nav-item dropdown">
+                <a href="#webinar" class="nav-link dropdown-toggle">Events</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#webinar" class="dropdown-item">Webinar</a></li>
+                    <li><a href="#workshop" class="dropdown-item">Workshop</a></li>
+                    <li><a href="#competition" class="dropdown-item">Try Out</a></li>
+                </ul>
+                </li>
                 <li><a href="#galeri" class="nav-link">Galeri</a></li>
                 <li><a href="#kontak" class="nav-link">Kontak</a></li>
             </ul>
@@ -81,7 +87,7 @@
             <div class="about-content">
                 <div class="about-image fade-in">
                     <div class="about-illustration">
-                        <img src="/images/pnglogo_garasicerdas.png" alt="Tentang Garasi Cerdas">
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761406848/Logo-removebg-preview_vocesl.png" alt="Tentang Garasi Cerdas">
                     </div>
                 </div>
 
@@ -108,54 +114,346 @@
         <div class="container">
             <h2 class="section-title fade-in">Program Kami</h2>
             <div class="programs-grid">
-                <div class="program-card fade-in">
+                <!-- Program Card -->
+                    <!-- Kartu Program -->
+                    <div class="program-card fade-in">
                     <div class="program-icon">
                         <i class="fas fa-spell-check"></i>
                     </div>
                     <h3>Privat Calistung</h3>
-                    <p>Program pembelajaran membaca, menulis, dan berhitung untuk anak usia dini</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
-                </div>
-                <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-calculator"></i>
+                    <p>Program pembelajaran membaca, menulis, dan berhitung untuk anak usia dini.</p>
+                    <button class="btn-outline" onclick="openProgramDetail('calistung')">Lihat Detail</button>
                     </div>
-                    <h3>Privat Matematika</h3>
-                    <p>Bimbingan matematika untuk semua jenjang dengan metode yang mudah dipahami</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
-                </div>
-                <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-flask"></i>
+
+                    <!-- Fullscreen Program Detail -->
+                    <div id="program-calistung" class="program-fullscreen hidden">
+                    <div class="program-content">
+                        <span class="close-btn" onclick="closeProgramDetail('calistung')">&times;</span>
+                        <h1>Program Calistung – Bimbel Garasi Cerdas</h1>
+                        <p>Belajar membaca, menulis, dan berhitung untuk anak usia dini dengan metode bermain yang menyenangkan dan ramah anak.</p>
+
+                        <h2>💻 Privat Online Calistung</h2>
+                        <table>
+                        <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                        <tr><td>4x (1x/minggu)</td><td>Rp100.000</td></tr>
+                        <tr><td>8x (2x/minggu)</td><td>Rp200.000</td></tr>
+                        <tr><td>12x (3x/minggu)</td><td>Rp300.000</td></tr>
+                        <tr><td>16x (4x/minggu)</td><td>Rp400.000</td></tr>
+                        </table>
+
+                        <h2>🏠 Privat Offline Calistung</h2>
+                        <table>
+                        <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                        <tr><td>4x (1x/minggu)</td><td>Rp150.000</td></tr>
+                        <tr><td>8x (2x/minggu)</td><td>Rp300.000</td></tr>
+                        <tr><td>12x (3x/minggu)</td><td>Rp425.000</td></tr>
+                        <tr><td>16x (4x/minggu)</td><td>Rp550.000</td></tr>
+                        </table>
+
+                        <div class="program-actions">
+                        <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                        <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Privat Science</h3>
-                    <p>Pembelajaran sains yang menyenangkan dan aplikatif</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
-                </div>
-                <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-language"></i>
                     </div>
-                    <h3>Privat Bahasa Inggris</h3>
-                    <p>Meningkatkan kemampuan bahasa Inggris dengan metode komunikatif</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
-                </div>
+
+
+
+                <!-- Kartu Program Matematika -->
                 <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Privat Programming</h3>
-                    <p>Belajar coding dan pemrograman untuk masa depan digital</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
+                <div class="program-icon">
+                    <i class="fas fa-square-root-alt"></i>
                 </div>
+                <h3>Privat & Reguler Matematika</h3>
+                <p>Bimbingan matematika untuk semua jenjang dengan metode yang mudah dipahami</p>
+                <button class="btn-outline" onclick="openProgramDetail('math')">Lihat Detail</button>
+                </div>
+
+                <!-- Popup Fullscreen Detail Matematika -->
+                <div id="program-math" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('math')">&times;</span>
+
+                    <div class="program-content">
+                    <h1>Program Matematika – Bimbel Garasi Cerdas</h1>
+                    <p>
+                        Program Matematika kami dirancang untuk membantu siswa memahami konsep dengan lebih mendalam, 
+                        bukan sekadar menghafal rumus. Belajar bisa dilakukan secara reguler di tempat, privat di rumah, 
+                        atau online lewat Zoom.
+                    </p>
+
+                    <h2>🏫 Kelas Reguler (Siswa ke Tempat, Tiap Hari Minggu)</h2>
+                    <table>
+                        <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                        <tr><td>4x (1x/minggu)</td><td>Rp175.000</td></tr>
+                        <tr><td>8x (2x/minggu)</td><td>Rp350.000</td></tr>
+                        <tr><td>12x (3x/minggu)</td><td>Rp500.000</td></tr>
+                        <tr><td>16x (4x/minggu)</td><td>Rp700.000</td></tr>
+                    </table>
+
+                    <h2>🏠 Privat Offline (Guru ke Rumah Siswa)</h2>
+                    <table>
+                        <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                        <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                        <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                        <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                        <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+
+                    <h2>💻 Privat Online (Melalui Zoom)</h2>
+                    <table>
+                        <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                        <tr><td>4x (1x/minggu)</td><td>Rp200.000</td></tr>
+                        <tr><td>8x (2x/minggu)</td><td>Rp400.000</td></tr>
+                        <tr><td>12x (3x/minggu)</td><td>Rp600.000</td></tr>
+                        <tr><td>16x (4x/minggu)</td><td>Rp800.000</td></tr>
+                    </table>
+
+                    <h3>📘 Fasilitas</h3>
+                    <ul>
+                        <li>Modul belajar dan latihan soal gratis</li>
+                        <li>Evaluasi hasil belajar tiap bulan</li>
+                        <li>Waktu fleksibel, bisa disesuaikan dengan jadwal siswa</li>
+                        <li>Pendekatan belajar berbasis konsep dan pemahaman</li>
+                    </ul>
+
+                    <div class="program-actions">
+                        <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                        <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Kartu Program Science -->
                 <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Privat Robotic</h3>
-                    <p>Eksplorasi dunia robotika dan teknologi modern</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
+                <div class="program-icon">
+                    <i class="fas fa-flask"></i>
                 </div>
+                <h3>Privat & Reguler Science</h3>
+                <p>Pembelajaran sains yang menyenangkan dan aplikatif</p>
+                <button class="btn-outline" onclick="openProgramDetail('science')">Lihat Detail</button>
+                </div>
+
+                <!-- Fullscreen Detail Science -->
+                <div id="program-science" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('science')">&times;</span>
+
+                    <h1>Program Science – Bimbel Garasi Cerdas</h1>
+                    <p>
+                    Program Science ini membantu siswa memahami konsep IPA secara menyenangkan dan aplikatif. 
+                    Kami memadukan teori dengan aktivitas eksperimen sederhana agar siswa lebih tertarik pada sains.
+                    Belajar bisa dilakukan secara reguler di tempat, privat di rumah, atau online lewat Zoom.
+                    </p>
+
+                    <h2>🏫 Kelas Reguler (Siswa ke Tempat, Tiap Hari Minggu)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp175.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp350.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp500.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp700.000</td></tr>
+                    </table>
+
+                    <h2>🏠 Privat Offline (Guru ke Rumah Siswa)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+
+                    <h2>💻 Privat Online (Melalui Zoom)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp200.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp400.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp800.000</td></tr>
+                    </table>
+
+                    <h3>🔬 Fasilitas</h3>
+                    <ul>
+                    <li>Modul dan lembar eksperimen sederhana</li>
+                    <li>Simulasi interaktif untuk memahami konsep sains</li>
+                    <li>Evaluasi hasil belajar bulanan</li>
+                    <li>Jadwal fleksibel, bisa disesuaikan dengan waktu siswa</li>
+                    </ul>
+
+                    <div class="program-actions">
+                    <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                    <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Kartu Program English -->
+                <div class="program-card fade-in">
+                <div class="program-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Privat & Reguler English</h3>
+                <p>Meningkatkan kemampuan bahasa Inggris dengan metode komunikatif</p>
+                <button class="btn-outline" onclick="openProgramDetail('english')">Lihat Detail</button>
+                </div>
+
+                <!-- Fullscreen Detail English -->
+                <div id="program-english" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('english')">&times;</span>
+
+                    <h1>Program English – Bimbel Garasi Cerdas</h1>
+                    <p>
+                    Program English ini dirancang untuk membantu siswa belajar Bahasa Inggris dengan cara yang natural 
+                    dan menyenangkan. Materi difokuskan pada kemampuan membaca, menulis, berbicara, dan mendengarkan 
+                    dengan metode yang interaktif dan komunikatif.
+                    </p>
+
+                    <h2>🏫 Kelas Reguler (Siswa ke Tempat, Tiap Hari Minggu)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp175.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp350.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp500.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp700.000</td></tr>
+                    </table>
+
+                    <h2>🏠 Privat Offline (Guru ke Rumah Siswa)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+
+                    <h2>💻 Privat Online (Melalui Zoom)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp200.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp400.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp800.000</td></tr>
+                    </table>
+
+                    <h3>📚 Fasilitas</h3>
+                    <ul>
+                    <li>Modul belajar Bahasa Inggris (grammar, vocabulary, speaking)</li>
+                    <li>Latihan listening dan pronunciation</li>
+                    <li>Evaluasi hasil belajar bulanan</li>
+                    <li>Jadwal fleksibel sesuai kebutuhan siswa</li>
+                    </ul>
+
+                    <div class="program-actions">
+                    <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                    <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Kartu Program Private Programming -->
+                <div class="program-card fade-in">
+                <div class="program-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Privat Programming</h3>
+                <p>Belajar coding dan pemrograman untuk masa depan digital.</p>
+                <button class="btn-outline" onclick="openProgramDetail('programming')">Lihat Detail</button>
+                </div>
+
+                <!-- Fullscreen Detail Programming -->
+                <div id="program-programming" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('programming')">&times;</span>
+
+                    <h1>Program Privat Programming – Bimbel Garasi Cerdas</h1>
+                    <p>
+                    Program ini memperkenalkan dunia pemrograman kepada anak-anak secara menyenangkan dan interaktif.
+                    Siswa belajar konsep dasar coding, logika berpikir, dan pembuatan proyek sederhana seperti animasi, game,
+                    atau simulasi menggunakan platform yang ramah anak seperti Scratch, Blockly, atau Python dasar.
+                    </p>
+
+                    <h2>🏠 Privat Offline (Guru ke Rumah Siswa)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+
+                    <h2>💻 Privat Online (Melalui Zoom)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp200.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp400.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp800.000</td></tr>
+                    </table>
+
+                    <h3>💡 Fasilitas</h3>
+                    <ul>
+                    <li>Modul belajar coding berbasis proyek</li>
+                    <li>Latihan membuat game, animasi, dan simulasi interaktif</li>
+                    <li>Evaluasi hasil belajar dan portofolio proyek</li>
+                    <li>Waktu belajar fleksibel sesuai kebutuhan siswa</li>
+                    </ul>
+
+                    <div class="program-actions">
+                    <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                    <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Kartu Program Private Robotic -->
+                <div class="program-card fade-in">
+                <div class="program-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Privat Robotic</h3>
+                <p>Eksplorasi dunia robotika dan teknologi modern.</p>
+                <button class="btn-outline" onclick="openProgramDetail('robotic')">Lihat Detail</button>
+                </div>
+
+                <!-- Fullscreen Detail Robotic -->
+                <div id="program-robotic" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('robotic')">&times;</span>
+
+                    <h1>Program Privat Robotic – Bimbel Garasi Cerdas</h1>
+                    <p>
+                    Program ini mengajarkan dasar-dasar robotika dengan pendekatan praktis dan menyenangkan. 
+                    Siswa akan belajar konsep sensor, motor, dan pemrograman sederhana menggunakan kit edukatif seperti 
+                    Arduino, Micro:bit, atau Lego Mindstorms (disesuaikan dengan usia dan kemampuan siswa).
+                    </p>
+
+                    <h2>🏠 Privat Offline (Guru ke Rumah Siswa)</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+
+                    <h3>⚙️ Fasilitas</h3>
+                    <ul>
+                    <li>Modul pembelajaran robotika dasar</li>
+                    <li>Praktik langsung menggunakan kit robotik</li>
+                    <li>Proyek mini tiap bulan</li>
+                    <li>Evaluasi dan sertifikat penyelesaian program</li>
+                    </ul>
+
+                    <div class="program-actions">
+                    <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                    <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
+                    </div>
+                </div>
+                </div>
+
                 <div class="program-card fade-in">
                     <div class="program-icon">
                         <i class="fas fa-swimmer"></i>
@@ -175,81 +473,68 @@
             <div class="tutors-grid">
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-tie"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405758/2_z4kpqm.png" alt="Risma Amelia, M.Pd">
                     </div>
                     <h3>Risma Amelia, M.Pd</h3>
                     <p class="tutor-role">Founder</p>
                     <p class="tutor-specialty">Educational Leadership</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-graduate"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405759/3_l6amj1.png" alt="Wafa Kaharisma, S.Pd">
                     </div>
                     <h3>Wafa Kharisma, S.Pd</h3>
                     <p class="tutor-role">Math &amp; Science Tutor</p>
                     <p class="tutor-specialty">Mathematics and Science</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-graduate"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405759/5_cl02qy.png" alt="Lina Marlina, S.Pd">
                     </div>
                     <h3>Lina Marlina, S.Pd</h3>
                     <p class="tutor-role">Science Physics &amp; Biology</p>
                     <p class="tutor-specialty">Physics and Biology</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-graduate"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405759/6_el0mrp.png" alt="Ameliya Permatasari, S.Pd">
                     </div>
-                    <h3>Amelia Permatasari, S.Pd</h3>
+                    <h3>Ameliya Permatasari, S.Pd</h3>
                     <p class="tutor-role">Math &amp; Science Tutor</p>
                     <p class="tutor-specialty">Mathematics and Science</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-graduate"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405758/4_aoylbq.png" alt="Rahma Alia N, S.Pd">
                     </div>
                     <h3>Rahma Alia N, S.Pd</h3>
                     <p class="tutor-role">English Tutor</p>
                     <p class="tutor-specialty">English Language</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <i class="fas fa-user-graduate"></i>
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405759/7_g0tzrg.png" alt="Sabila Aditya., S.Pd">
+                    </div>
+                    <h3>Sabila Aditya., S.Pd</h3>
+                    <p class="tutor-role">Mathematics Tutor</p>
+                    <p class="tutor-specialty">Mathematics</p>
+                </div>
+                <div class="tutor-card fade-in">
+                    <div class="tutor-image">
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1761405758/1_lh3ar6.png" alt="Rezka Setiadi Abdullah">
+                    </div>
+                    <h3>Rezka Setiadi Abdullah, S.Pd</h3>
+                    <p class="tutor-role">Swimming Tutor</p>
+                    <p class="tutor-specialty">Swimming Instruction</p>
+                </div>
+                <div class="tutor-card fade-in">
+                    <div class="tutor-image">
+                        <img src="" alt="Geraldi Valeska H.P., S.Pd">
                     </div>
                     <h3>Geraldi Valeska H.P., S.Pd</h3>
                     <p class="tutor-role">Informatics Tutor</p>
                     <p class="tutor-specialty">Robotics and Programming</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
                 <div class="tutor-card fade-in">
-                    <div class="tutor-image">
-                        <i class="fas fa-swimmer"></i>
-                    </div>
-                    <h3>Rezka</h3>
-                    <p class="tutor-role">Swimming Tutor</p>
-                    <p class="tutor-specialty">Swimming Instruction</p>
-                    <a href="https://instagram.com/garasicerdas.id" target="_blank" rel="noopener" class="tutor-social">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -258,7 +543,7 @@
     <section id="webinar" class="webinar">
         <div class="container">
             <div class="webinar-hero fade-in">
-                <h2 class="section-title">Ikuti Webinar Edukatif Garasi Cerdas!</h2>
+                <h2 class="section-title">Events terdekat kami!</h2>
                 <p class="section-subtitle">Belajar langsung dari tutor dan praktisi pendidikan.</p>
             </div>
             
@@ -535,7 +820,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Alamat</h4>
-                            <p>Kota Bandung</p>
+                            <p>Kota Bandung, Cimahi, dan Sekitarnya</p>
                         </div>
                     </div>
                     <div class="contact-item">

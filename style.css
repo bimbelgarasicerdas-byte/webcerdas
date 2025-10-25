@@ -968,7 +968,7 @@ p {
 
 .nav-logo img {
   width: 110px;
-  height: 95px;
+  height: auto;
   max-width: 100%;
 }
 
@@ -993,6 +993,49 @@ p {
     transition: var(--transition);
     font-size: 0.95rem;
 }
+
+/* Posisi dasar */
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 160px;
+  z-index: 100;
+}
+
+/* Tampilkan saat hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling item di dalam dropdown */
+.dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .nav-link:hover {
     color: var(--primary-blue);
@@ -1086,9 +1129,9 @@ p {
 }
 
 .about-illustration {
-    width: 250px;
-    height: 250px;
-    
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1165,6 +1208,265 @@ p {
     font-size: 1rem;
 }
 
+/* ====== CSS UTAMA ====== */
+.program-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* pastikan full layar */
+  background: #b2c5ee;
+  color: #0a0041;
+  overflow-y: auto;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+  padding: 3rem 1rem;
+  display: block;
+}
+
+.program-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: #332D56;
+}
+
+.program-fullscreen.hidden {
+  display: none;
+}
+
+.program-content {
+  max-width: 900px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  animation: slideUp 0.5s ease;
+}
+
+#program-calistung {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1)
+}
+
+#program-english {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1);
+}
+
+#program-math {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1);
+}
+
+
+#program-robotic {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1)
+}
+
+#program-programming {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1)
+}
+
+#program-renang {
+  background: linear-gradient(135deg, #E3EEB2 0%, #71C0BB 100%);
+  color: rgba(19, 52, 59, 1)
+}
+
+
+.program-fullscreen h1 {
+  color: rgba(19, 52, 59, 1);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.program-fullscreen h2 {
+  color: rgba(19, 52, 59, 1);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.program-fullscreen h3 {
+  color: rgba(19, 52, 59, 1);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: #332D56;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #71C0BB;
+  color: white;
+}
+
+.program-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary { background: #4E6688; }
+.btn-secondary { background: #71C0BB; }
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
+/* Tombol pembuka */
+.detail-btn {
+  background-color: #4E6688;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.detail-btn:hover {
+  background-color: #332D56;
+}
+
+/* daftar umum */
+.daftar {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+}
+
+/* Konten utama popup */
+.daftar-content {
+  background: #fff;
+  color: #333;
+  margin: 60px auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Tombol close (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 30px;
+  color: #332D56;
+  cursor: pointer;
+  font-weight: bold;
+}
+.close:hover {
+  color: #71C0BB;
+}
+
+/* Tabel harga */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.price-table th {
+  background-color: #E3EEB2;
+  color: #332D56;
+  padding: 10px;
+}
+.price-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Fasilitas */
+.fasilitas ul {
+  list-style: none;
+  padding: 0;
+}
+.fasilitas li::before {
+  content: "✔️ ";
+  color: #71C0BB;
+}
+.fasilitas h3 {
+  color: #4E6688;
+  margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+  margin-top: 25px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin: 5px;
+  transition: 0.3s;
+}
+.btn.daftar { background: #4E6688; }
+.btn.daftar:hover { background: #332D56; }
+.btn.konsultasi { background: #71C0BB; }
+.btn.konsultasi:hover { background: #4E6688; }
+
+/* Animasi muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .daftar-content {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+
 /* Tutors Section */
 .tutors {
     padding: var(--section-padding);
@@ -1219,6 +1521,14 @@ p {
     font-size: 3rem;
     color: var(--white);
     margin: 0 auto 20px;
+    overflow: hidden; /* penting agar gambar tidak keluar dari lingkaran */
+}
+
+.tutor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .tutor-card h3 {

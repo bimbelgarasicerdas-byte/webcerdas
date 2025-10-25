@@ -33,6 +33,7 @@ function initNavigation() {
     });
 }
 
+
 // Scroll animations
 function initScrollAnimations() {
     const observerOptions = {
@@ -51,6 +52,16 @@ function initScrollAnimations() {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 }
+
+//Program Section
+function openProgramDetail(id) {
+  document.getElementById(`program-${id}`).classList.remove('hidden');
+}
+
+function closeProgramDetail(id) {
+  document.getElementById(`program-${id}`).classList.add('hidden');
+}
+
 
 // Try Out Quiz functionality
 const quizData = {

@@ -454,13 +454,46 @@
                 </div>
                 </div>
 
+                <<!-- Kartu Program Private Renang -->
                 <div class="program-card fade-in">
-                    <div class="program-icon">
-                        <i class="fas fa-swimmer"></i>
+                <div class="program-icon">
+                    <i class="fas fa-swimmer"></i>
+                </div>
+                <h3>Privat Renang</h3>
+                <p>Belajar berenang dengan aman, menyenangkan, dan sesuai kemampuan anak.</p>
+                <button class="btn-outline" onclick="openProgramDetail('renang')">Lihat Detail</button>
+                </div>
+                <!-- Fullscreen Detail Renang -->
+                <div id="program-renang" class="program-fullscreen hidden">
+                <div class="program-inner">
+                    <span class="close-btn" onclick="closeProgramDetail('renang')">&times;</span>
+                    <h1>Program Privat Renang – Bimbel Garasi Cerdas</h1>
+                    <p>
+                    Program ini dirancang untuk membantu anak-anak dan remaja belajar berenang dari dasar hingga mahir.
+                    Dengan pendampingan pelatih berpengalaman, peserta akan belajar teknik pernapasan, gaya renang,
+                    serta latihan ketahanan air dengan cara yang menyenangkan dan penuh semangat.
+                    </p>
+                    <h2>🏊 Pelatih ke Kolam Renang Pilihan Siswa</h2>
+                    <table>
+                    <tr><th>Pertemuan / Bulan</th><th>Biaya</th></tr>
+                    <tr><td>4x (1x/minggu)</td><td>Rp300.000</td></tr>
+                    <tr><td>8x (2x/minggu)</td><td>Rp600.000</td></tr>
+                    <tr><td>12x (3x/minggu)</td><td>Rp875.000</td></tr>
+                    <tr><td>16x (4x/minggu)</td><td>Rp1.150.000</td></tr>
+                    </table>
+                    <h3>💡 Fasilitas</h3>
+                    <ul>
+                    <li>Pelatih berpengalaman dan bersertifikat</li>
+                    <li>Latihan teknik dasar: pernapasan, apung, dan gaya bebas</li>
+                    <li>Pendampingan hingga bisa berenang mandiri</li>
+                    <li>Jadwal fleksibel sesuai waktu siswa</li>
+                    <li>Biaya belum termasuk tiket kolam renang</li>
+                    </ul>
+                    <div class="program-actions">
+                    <a href="https://bit.ly/FormBimbelGarasiCerdas" target="_blank" class="btn-primary">Daftar Sekarang</a>
+                    <a href="https://wa.me/6285117555960" target="_blank" class="btn-secondary">Konsultasi via WhatsApp</a>
                     </div>
-                    <h3>Olahraga Renang</h3>
-                    <p>Pelatihan renang profesional untuk segala usia</p>
-                    <a href="#kontak" class="btn-outline">Lihat Detail</a>
+                </div>
                 </div>
             </div>
         </div>
@@ -529,7 +562,7 @@
                 </div>
                 <div class="tutor-card fade-in">
                     <div class="tutor-image">
-                        <img src="" alt="Geraldi Valeska H.P., S.Pd">
+                        <img src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1762071630/Ge_Photo_gokwvz.png" alt="Geraldi Valeska H.P., S.Pd">
                     </div>
                     <h3>Geraldi Valeska H.P., S.Pd</h3>
                     <p class="tutor-role">Informatics Tutor</p>
@@ -571,7 +604,7 @@
             <div class="webinar-recordings fade-in">
                 <h3>Rekaman Webinar</h3>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://youtube.com/shorts/vLjyx1C4R-4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -622,30 +655,34 @@
     </section> -->
 
    <!-- Testimoni Section -->
-<section id="testimoni" class="testimonials">
-  <div class="container">
-    <h2 class="section-title fade-in">Testimoni</h2>
-    <div class="testimonials-wrapper">
-      <!-- Area slider -->
-      <div class="testimonials-slider">
+        <section id="testimoni" class="testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">Testimoni</h2>
+            <div class="testimonials-wrapper">
+            <div class="testimonials-slider">
+
         <div class="testimonial-slide active">
-          <div class="testimonial-content">
-            <p>"Anak saya sangat senang belajar di Garasi Cerdas. Nilai matematikanya meningkat drastis!"</p>
-            <div class="testimonial-author">
-              <h4>Ibu Sarah</h4>
-              <span>Orang Tua Siswa</span>
+            <div class="testimonial-content">
+                <img  src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1762069763/WhatsApp_Image_2025-10-29_at_08.46.04_67e68f2e_ju47ba.jpg" 
+                alt="Testimoni Orang Tua Siswa"
+                class="testimonial-image">
+                    <div class="testimonial-author">
+                <h4>Orang Tua Siswa</h4>
+                <span> </span>
             </div>
-          </div>
+            </div>
+        </div>
         </div>
 
         <div class="testimonial-slide">
           <div class="testimonial-content">
-            <p>"Tutor di sini sangat sabar dan cara mengajarnya mudah dipahami. Terima kasih!"</p>
-            <div class="testimonial-author">
-              <h4>Ahmad</h4>
-              <span>Siswa SMP</span>
+                <img  src="https://res.cloudinary.com/dqnnmibfu/image/upload/v1762069764/WhatsApp_Image_2025-10-29_at_08.46.05_a84ff7fa_qwi6yq.jpg" 
+                alt="Testimoni Orang Tua Siswa"
+                class="testimonial-image">
+                    <div class="testimonial-author">
+                <h4>Orang Tua Siswa</h4>
+                <span> </span>
             </div>
-          </div>
         </div>
 
         <div class="testimonial-slide">
@@ -834,13 +871,13 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>info@garasicerdas.id</p>
+                            <p>garasicerdas@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-instagram"></i>
                         <div>
-                            <h4>Instagram &amp; TikTok</h4>
+                            <h4>Instagram, Tiktok &amp; Youtube</h4>
                             <p>@garasicerdas</p>
                         </div>
                     </div>
@@ -867,6 +904,7 @@
                     <a href="https://instagram.com/bimbelgarasicerdas" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                     <a href="https://tiktok.com/@bimbelgarasicerdas" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
                     <a href="https://wa.me/6285117555960" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://youtube.com/garasicerdas" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
